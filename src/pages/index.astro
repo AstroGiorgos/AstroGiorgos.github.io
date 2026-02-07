@@ -1,8 +1,8 @@
+
 ---
 import Layout from '../layouts/Layout.astro'
-
 import { profile } from '@/settings'
-import { publications } from '@/data/cv'
+import { getCollection } from 'astro:content'
 import ProfilePictures from '@/assets/profile_pictures.jpg'
 import Hero from '@/components/ui/Hero.astro'
 import Grid from '@/components/ui/Grid.astro'
@@ -10,28 +10,35 @@ import ArticleList from '@/components/ui/ArticleList.astro'
 
 const { fullName, title, institute, research_areas } = profile
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const posts = await getCollection('blog')
+const recentPosts = posts
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, 3)  // edit to the number of blog posts shown on the front page
+  
+
+
+const recentNewsItems = recentPosts.map((p) => {
+  const slug = p.id.split('/').pop()?.replace(/\.md$/, '') ?? ''
+  return {
+    title: p.data.title,
+    journal: p.data.excerpt ?? '',
+    time: p.data.date,
+    href: `/blog/${slug}`,
+  }
+})
+
 ---
 
 <Layout>
-	<!-- Hero Section -->
-	<section class='flex items-center gap-12 border-b pb-12'>
-		<Hero
-			fullName={fullName}
-			title={title}
-			institute={institute}
-			profilePicture={ProfilePictures}
-		/>
-	</section>
+  <section class="flex items-center gap-12 border-b pb-12">
+    <Hero fullName={fullName} title={title} institute={institute} profilePicture={ProfilePictures} />
+  </section>
 
-	<!-- Research Areas -->
-	<section class='py-12 border-b'>
-		<Grid gridTitle='Research Areas' gridItems={research_areas} />
-	</section>
+  <section class="py-12 border-b">
+    <Grid gridTitle="Research Areas" gridItems={research_areas} />
+  </section>
 
-	<!-- Recent Publications -->
-	<section class='py-12 border-t'>
-		<ArticleList listTitle='Recent Publications' listItems={publications} />
-	</section>
+  <section class="py-12 border-t">
+    <ArticleList listTitle="Recent News" listItems={recentNewsItems} />
+  </section>
 </Layout>

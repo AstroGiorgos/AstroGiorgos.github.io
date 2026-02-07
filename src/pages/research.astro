@@ -8,62 +8,108 @@ import {RESEARCH_ICONS} from "@/data/researchIcons";
 const { research_areas } = profile;
 ---
 
-<Layout title="Research | Dr. Marie Curie">
+<Layout title="Research">
   <div class="prose max-w-none">
     <h1 class="text-3xl font-bold mb-8">Research Statement</h1>
 
     <div class="mb-12">
       <p class="text-lg mb-6">
-        My research focuses on groundbreaking investigations into radioactivity and the discovery of new radioactive elements. Through meticulous experimental techniques and innovative methodologies, I aim to advance our understanding of radioactive phenomena and their applications in both physics and chemistry.
-      </p>
-      <p class="text-lg mb-6">
-        This interdisciplinary approach has led to significant discoveries, including the isolation of polonium and radium, contributing to the foundation of modern nuclear physics and radiochemistry.
+        My research focuses on <em>transient astrophysics</em> — the study of astrophysical phenomena that appear, evolve, and fade on short cosmic timescales.
       </p>
     </div>
 
     <h2 class="text-2xl font-bold mb-6">Research Areas</h2>
-    <div class="grid gap-8 mb-12">
+    <div class="grid gap-3 mb-12">
       {
         research_areas.map((area) => (
-          <div class="flex gap-6 items-start">
-            <BetterIcon>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke-width="2"
-                class="size-6 stroke-accent"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d={RESEARCH_ICONS[area.field as keyof typeof RESEARCH_ICONS]?.path || RESEARCH_ICONS['computer-science'].path}
-                />
-              </svg>
-            </BetterIcon>
-            <div>
-              <h3 class="text-xl font-semibold mb-2">{area.title}</h3>
-              <p class="text-base">{area.description}</p>
+            <div class="flex gap-6 items-start">
+            <!--
+              <BetterIcon>
+                {area.icon ? (
+                  <img
+                    src={area.icon}
+                    alt={`${area.title} icon`}
+                    class="w-20 h-20 object-cover rounded"
+                  />
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="2"
+                    class="size-6 stroke-accent"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d={RESEARCH_ICONS[area.field as keyof typeof RESEARCH_ICONS]?.path || RESEARCH_ICONS['computer-science'].path}
+                    />
+                  </svg>
+                )}
+              </BetterIcon>
+                -->
+                
+                {area.icon ? (
+                  <img
+                    src={area.icon}
+                    alt={`${area.title} icon`}
+                    class="w-20 h-20 object-cover rounded flex-none"
+                  />
+                ) : (
+                  <BetterIcon>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke-width="2"
+                      class="size-6 stroke-accent"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d={RESEARCH_ICONS[area.field as keyof typeof RESEARCH_ICONS]?.path || RESEARCH_ICONS['computer-science'].path}
+                      />
+                    </svg>
+                  </BetterIcon>
+                )}
+
+                
+                
+              <div>
+                <h3 class="text-xl font-semibold mb-2">
+                    {area.slug ? <a href={`/research/${area.slug}`} class="link link-hover">{area.title}</a> : area.title}
+                </h3>
+                
+                
+                <p class="text-base">{area.description}</p>
+              </div>
             </div>
-          </div>
         ))
       }
     </div>
 
-    <List listTitle="Current Projects" listItems={[
-      {
-        title: "Radioactivity Studies",
-        description: "Investigation of radioactive properties in uranium minerals and isolation of new radioactive elements."
-      },
-      {
-        title: "Measurement Techniques",
-        description: "Development of precise methods for measuring radioactive emissions and their properties."
-      }
-    ]} />
-
-    <h2 class="text-2xl font-bold mb-6">Research Impact</h2>
-    <p class="text-lg mb-6">
-      My research has opened new frontiers in radioactivity studies, leading to practical applications in both scientific research and medical treatments. The discoveries have revolutionized our understanding of atomic structure and radioactive decay processes.
-    </p>
+    <List
+      listTitle="Current Projects"
+      listItems={[
+        {
+          title: "BlackGEM",
+          href: "/research/surveys#blackgem",
+          description:
+            "An array of telescopes searching for electromagnetic counterparts of gravitational waves and conducting wide-field transient surveys in the southern hemisphere."
+        },
+        {
+          title: "Rubin LSST",
+          href: "/research/surveys#lsst",
+          description:
+            "The Legacy Survey of Space and Time conducted with the Vera C. Rubin Observatory, transforming time-domain astronomy through scale and depth."
+        },
+        {
+          title: "ENGRAVE",
+          href: "/research/GW#engrave",
+          description:
+            "A large European collaboration using ESO facilities to follow up gravitational-wave events and their electromagnetic counterparts."
+        }
+      ]}
+    />
   </div>
 </Layout>

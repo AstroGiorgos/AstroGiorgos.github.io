@@ -1,0 +1,48 @@
+---
+import Layout from "./Layout.astro";
+
+const fm = Astro.props.frontmatter ?? {};
+const title = Astro.props.title ?? fm.title;
+const description = Astro.props.description ?? fm.description;
+const heroImage = Astro.props.heroImage ?? fm.heroImage;
+const heroAlt = Astro.props.heroAlt ?? fm.heroAlt;
+const heroCaption = Astro.props.heroCaption ?? fm.heroCaption;
+---
+
+<Layout title={title} description={description}>
+  <!-- Pull content slightly upward -->
+  <div class="-mt-8">
+
+    <!-- Back link -->
+    <a href="/research" class="no-underline block mb-4">
+      ← Back to Research
+    </a>
+
+    <!-- Hero -->
+    {heroImage && (
+      <figure class="mb-10">
+        <div class="w-full overflow-hidden rounded-xl border">
+          <img
+            src={heroImage}
+            alt={heroAlt ?? ""}
+            class="w-full h-64 md:h-80 object-cover"
+            loading="eager"
+          />
+        </div>
+
+        {heroCaption && (
+          <figcaption class="text-sm mt-2 opacity-70 text-right">
+            {heroCaption}
+          </figcaption>
+        )}
+      </figure>
+    )}
+
+    <!-- Main content -->
+    <article class="prose prose-lg max-w-none">
+      {title && <h1>{title}</h1>}
+      <slot />
+    </article>
+
+  </div>
+</Layout>

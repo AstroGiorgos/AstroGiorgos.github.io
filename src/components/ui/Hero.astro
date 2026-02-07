@@ -8,12 +8,16 @@ const {fullName, title, institute, profilePicture} = Astro.props
 ---
 <div class='flex-1'>
   <h1 class='text-4xl font-bold mb-4'>
-    Welcome! I'm <span class='text-secondary'>{fullName}</span>
+    Welcome! I'm <span class='text-info'>{fullName}</span>
   </h1>
   <p class='text-xl text-gray-600 mb-4'>{title}{institute ? ` at ${institute}` : ''}</p>
   <p class='text-lg mb-6'>
-    Brief impactful description of your research focus and academic mission.
-    Highlight your key contributions and areas of expertise.
+    I am an astrophysicist and I study the most energetic transient phenomena in the Universe.
+
+  <p class='text-lg mb-6'>
+
+    I work as a Senior Researcher at the <a href="https://www.space.dtu.dk/english/research-divisions/astrophysics-and-atmospheric-physics/research-areas/compact-objects-and-transient-phenomena">Technical University of Denmark</a>.
+
   </p>
   <div class='flex gap-4'>
     <SocialIcons />

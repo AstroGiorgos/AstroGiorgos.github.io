@@ -1,37 +1,35 @@
 ---
-title: "The Discovery of Radium"
-date: "1902-12-26"
-tags: ["Physics", "Research"]
-excerpt: "An account of the discovery of radium and its properties."
+title: "BlackGEM sees first light!"
+date: "2023-05-16"
+tags: ["research", "BlackGEM"]
+excerpt: "BlackGEM has achieved first light and is now beginning scientific operations at La Silla Observatory."
 ---
 
-# The Discovery of Radium
 
-The discovery of radium marked a significant milestone in the field of radioactivity research.
 
-## The Research Process
+<figure>
+  <img
+    src="/images/blog/BlackGEM-twillight.png"
+    alt="BalckGEM in twillight"
+  />
+  <figcaption>
+    Credit: S. Bloemen (Radboud University)/ESO
+  </figcaption>
+</figure>
 
-In 1898, my husband Pierre and I discovered the element radium. This discovery was the result of years of research and experimentation. Radium is a highly radioactive element with remarkable properties...
 
-### Key Findings
+In astronomy, it is always a special moment when a new telescope observes the sky for the first time — a milestone known as first light. I am very happy to share that this moment has now arrived for BlackGEM, a project I am involved in as a scientific partner.
 
-- Radium is highly radioactive
-- It produces luminescence
-- It has potential medical applications
+BlackGEM is an array of optical telescopes located at ESO’s La Silla Observatory in Chile. Its primary goal is to rapidly search large areas of the sky for the visible counterparts of gravitational-wave events, such as the mergers of neutron stars or black holes. While gravitational-wave detectors can signal that such an event has occurred, they localize it very imprecisely; BlackGEM is designed to pinpoint the associated light and identify the host galaxy.
 
-## Experimental Methods
+In addition to its role in gravitational-wave follow-up, BlackGEM also conducts wide-field surveys of the southern sky. Thanks to its automated operations and rapid response, the array is well suited to discover and study transient phenomena such as supernovae and other short-lived cosmic explosions.
 
-Our research involved:
 
-1. Processing uraninite ore
-2. Chemical separation techniques
-3. Precise measurements of radioactivity
+I am a PI-level partner in BlackGEM and a member of the project’s science team through DTU Space.
 
-### Technical Challenges
+---
 
-> The processing of pitchblende was a particularly challenging task, requiring tons of raw material to obtain mere decigrams of radium.
+### Further information
 
-Some code we used for calculations:
-`E = mc²`
-
-You can read more about our research [here](#).
+- **ESO (press release):**  
+  [BlackGEM telescopes begin hunt for gravitational-wave sources at ESO's La Silla Observatory](https://www.eso.org/public/denmark/news/eso2308/?fbclid=IwY2xjawPop4FleHRuA2FlbQIxMABicmlkETBES0N3UXNBcDl1eTBCczRDc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHo9eFnk8mXP63vowSdw6Y7OCcK-5fYevDRU5snCK_zQCGnvsb3GnOADVaCPl_aem_w-CbAz6z3lgCxGL495vnuw)

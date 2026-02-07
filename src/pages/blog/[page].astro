@@ -35,11 +35,11 @@ const { page } = Astro.props
 						<div class='card-body'>
 							<div class='flex justify-between items-start'>
 								<h2 class='card-title text-xl'>
-                            <a href={post.slug} class='hover:text-accent'>
+                            <a href={post.slug} class='hover:text-success'>
 										{post.title}
 									</a>
 								</h2>
-								<div class='badge badge-accent badge-outline p-4'>
+								<div class='badge badge-success badge-outline p-4'>
 									{post.badge}
 								</div>
 							</div>
@@ -54,7 +54,7 @@ const { page } = Astro.props
 							<div class='card-actions justify-end'>
 								<a
                             href={post.slug}
-									class='btn btn-sm btn-secondary text-secondary-content'
+									class='btn btn-sm btn-info text-secondary-content'
 								>
 									Read More
 								</a>

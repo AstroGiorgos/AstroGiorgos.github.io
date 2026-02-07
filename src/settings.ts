@@ -1,25 +1,29 @@
 export const profile = {
-	fullName: 'Your Name',
-	title: '',
-	institute: '',
+	fullName: 'Giorgos Leloudas',
+	title: 'Senior Researcher',
+	institute: 'DTU Space',
+    sidebarLabel: "Dr. Giorgos Leloudas",
 	author_name: '', // Author name to be highlighted in the papers section
 	research_areas: [
-		// { title: 'Physics', description: 'Brief description of the research interest', field: 'physics' },
+		 { title: 'Supernovae', description: 'Stars that explode', field: 'physics', slug: 'supernovae', icon: '/images/research/supernovae.jpg',},
+         { title: 'Tidal Disruption Events', description: 'Stars that get destroyed by black holes', field: 'physics' , slug: 'tde', icon: '/images/research/tde.jpg',},
+         { title: 'Transient surveys', description: 'Large projects to find transient phenomena', field: 'physics' , slug: 'surveys', icon: '/images/research/surveys2.png',},
+         { title: 'Gravitational waves', description: 'Their electromagnetic counterparts', field: 'physics' , slug: 'GW', icon: '/images/research/BNSgold.jpg',},
 	],
 }
 
 // Set equal to an empty string to hide the icon that you don't want to display
 export const social = {
-	email: '',
+	email: 'giorgos@space.dtu.dk',
 	linkedin: '',
-	x: 'https://www.x.com/',
+	x: '',
 	bluesky: '',
-	github: '',
+	github: 'https://github.com/AstroGiorgos',
 	gitlab: '',
 	scholar: '',
 	inspire: '',
 	arxiv: '',
-	orcid: '',
+	orcid: 'https://orcid.org/0000-0002-8597-0756',
 }
 
 export const template = {
