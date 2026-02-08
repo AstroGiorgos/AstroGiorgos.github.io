@@ -27,11 +27,21 @@ const {
 <html lang='en' data-theme="dark">
 	<head>
 		{template.transitions && <ClientRouter /> }
+        <script is:inline>
+          (() => {
+            const STORAGE_KEY = "theme";
+            const DEFAULT_THEME = "dark"; // <- default you want
 
+            const saved = localStorage.getItem(STORAGE_KEY);
+            const theme = saved || DEFAULT_THEME;
+
+            document.documentElement.setAttribute("data-theme", theme);
+
+            // Persist the default so a fresh visitor stays dark next time too
+            if (!saved) localStorage.setItem(STORAGE_KEY, theme);
+          })();
+        </script>
 		<Head title={title} description={description} image={image} />
-
-
-
 	</head>
 	<body>
 		<div class={`bg-base-100 drawer lg:drawer-open ${template.menu_left ? 'drawer-end' : ''}`}>
