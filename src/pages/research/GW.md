@@ -28,7 +28,7 @@ As an optical astronomer, my research focuses on gravitational-wave events that 
   <figure class="md:col-span-1">
     <div class="rounded-xl border overflow-hidden bg-base-100 shadow-sm">
       <img
-        src="/images/research/AT2017gfo.png"
+        src="/images/research/AT2017gfo.jpg"
         alt="Kilonona AT2017gfo"
         class="w-full object-cover"
       />

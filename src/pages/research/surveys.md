@@ -28,7 +28,7 @@ A significant part of my research is carried out through participation in transi
   <figure class="md:col-span-1">
     <div class="rounded-xl border overflow-hidden bg-base-100 shadow-sm">
       <img
-        src="/images/research/Rubin_FOV.png"
+        src="/images/research/Rubin_FOV.jpg"
         alt="Rubin FOV"
         class="w-full object-cover"
       />
@@ -78,7 +78,7 @@ A significant part of my research is carried out through participation in transi
   <figure class="md:col-span-1">
     <div class="rounded-xl border overflow-hidden bg-base-100 shadow-sm">
       <img
-        src="/images/research/pessto.png"
+        src="/images/research/pessto.jpg"
         alt="BlackGEM"
         class="w-full object-cover"
       />
