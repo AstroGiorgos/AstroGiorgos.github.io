@@ -39,6 +39,6 @@ export const template = {
 
 export const seo = {
 	default_title: 'The homepage of Giorgos Leloudas',
-	default_description: 'Astro Academia is a template for academic websites.',
+	default_description: 'Academic website of astrophysicist Giorgos Leloudas',
 	default_image: '/images/astro-academia.png',
 }
